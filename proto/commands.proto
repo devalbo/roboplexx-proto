@@ -1,4 +1,4 @@
-import "rpx.common.proto";
+import "common.proto";
 
 message Command {
 	required string hostId = 1;

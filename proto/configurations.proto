@@ -1,5 +1,5 @@
-import "rpx.common.proto";
-import "rpx.descriptions.proto";
+import "common.proto";
+import "descriptions.proto";
 
 message HostConfig {
 	required HostDescription hostDescription = 1;
