@@ -1,0 +1,20 @@
+message Property {
+	
+	enum Type {
+    	UnknownType = 0;
+    	StringType = 1;
+    	BooleanType = 2;
+    	IntType = 3;
+    	DoubleType = 4;
+    	BytesType = 5;
+	}
+
+	required string propertyId = 1;
+	required Type type = 2;
+	optional string string = 3;
+	optional bool bool = 4;
+	optional int64 int = 5;
+	optional double double = 6;
+	optional bytes bytes = 7;
+	optional string bytes_content_type = 8;
+}

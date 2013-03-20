@@ -1,0 +1,9 @@
+message HostDescription {
+	required string hostId = 1;
+	repeated DeviceDescription deviceDescriptions = 2;
+}
+
+message DeviceDescription {
+	required string deviceId = 1;
+	required string deviceType = 2;
+}

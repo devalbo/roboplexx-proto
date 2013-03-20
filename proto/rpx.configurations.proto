@@ -1,0 +1,12 @@
+import "rpx.common.proto";
+import "rpx.descriptions.proto";
+
+message HostConfig {
+	required HostDescription hostDescription = 1;
+	repeated DeviceConfig deviceConfigs = 2;
+}
+
+message DeviceConfig {
+	required string deviceId = 1;
+	repeated Property initProperties = 2;
+}
