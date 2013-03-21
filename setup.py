@@ -6,5 +6,6 @@ setup(
     packages=['rpx_proto',],
     license='',
     long_description=open('README.md').read(),
-    requires=['protobuf',],
+    requires=['protobuf==2.5.0',
+              ],
     )
