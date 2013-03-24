@@ -1,3 +1,5 @@
+import "common.proto";
+
 message HostDescription {
 	required string hostId = 1;
 	repeated DeviceDescription deviceDescriptions = 2;
@@ -6,4 +8,11 @@ message HostDescription {
 message DeviceDescription {
 	required string deviceId = 1;
 	required string deviceType = 2;
+	repeated PropertyDescription deviceProperties = 3;
+}
+
+message PropertyDescription {
+  required string propertyId = 1;
+  required PropertyType type = 2;
+  repeated PropertyDescription subProperties = 3;
 }

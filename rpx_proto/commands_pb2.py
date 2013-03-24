@@ -14,42 +14,42 @@ import common_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='commands.proto',
   package='',
-  serialized_pb='\n\x0e\x63ommands.proto\x1a\x0c\x63ommon.proto\"]\n\x07\x43ommand\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12\x10\n\x08\x64\x65viceId\x18\x02 \x02(\t\x12\x1d\n\nproperties\x18\x03 \x03(\x0b\x32\t.Property\x12\x11\n\trequestId\x18\x04 \x01(\t')
+  serialized_pb='\n\x0e\x63ommands.proto\x1a\x0c\x63ommon.proto\"c\n\rSetProperties\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12\x10\n\x08\x64\x65viceId\x18\x02 \x02(\t\x12\x1d\n\nproperties\x18\x03 \x03(\x0b\x32\t.Property\x12\x11\n\trequestId\x18\x05 \x01(\t')
 
 
 
 
-_COMMAND = _descriptor.Descriptor(
-  name='Command',
-  full_name='Command',
+_SETPROPERTIES = _descriptor.Descriptor(
+  name='SetProperties',
+  full_name='SetProperties',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='hostId', full_name='Command.hostId', index=0,
+      name='hostId', full_name='SetProperties.hostId', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='Command.deviceId', index=1,
+      name='deviceId', full_name='SetProperties.deviceId', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='properties', full_name='Command.properties', index=2,
+      name='properties', full_name='SetProperties.properties', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='requestId', full_name='Command.requestId', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='requestId', full_name='SetProperties.requestId', index=3,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -64,17 +64,17 @@ _COMMAND = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=32,
-  serialized_end=125,
+  serialized_end=131,
 )
 
-_COMMAND.fields_by_name['properties'].message_type = common_pb2._PROPERTY
-DESCRIPTOR.message_types_by_name['Command'] = _COMMAND
+_SETPROPERTIES.fields_by_name['properties'].message_type = common_pb2._PROPERTY
+DESCRIPTOR.message_types_by_name['SetProperties'] = _SETPROPERTIES
 
-class Command(_message.Message):
+class SetProperties(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _COMMAND
+  DESCRIPTOR = _SETPROPERTIES
 
-  # @@protoc_insertion_point(class_scope:Command)
+  # @@protoc_insertion_point(class_scope:SetProperties)
 
 
 # @@protoc_insertion_point(module_scope)
