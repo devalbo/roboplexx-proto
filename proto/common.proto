@@ -1,16 +1,22 @@
 
 enum PropertyType {
-    UnknownType = 0;
-    StringType = 1;
-    BooleanType = 2;
-    IntType = 3;
-    DoubleType = 4;
-    BytesType = 5;
-    SubPropertiesType = 6;
+  UnknownType = 0;
+  StringType = 1;
+  BooleanType = 2;
+  IntType = 3;
+  DoubleType = 4;
+  BytesType = 5;
+  SubPropertiesType = 6;
+}
+
+message PropertyTypeConstraints {
+  optional double DoubleTypeMaxVal = 1;
+  optional double DoubleTypeMinVal = 2;
+  optional int64 IntTypeMaxVal = 3;
+  optional int64 IntTypeMinVal = 4;
 }
 
 message Property {
-
 	required string propertyId = 1;
 	required PropertyType type = 2;
 	optional string string = 3;
@@ -21,4 +27,3 @@ message Property {
 	optional string bytes_content_type = 8;
 	repeated Property properties = 9;
 }
-

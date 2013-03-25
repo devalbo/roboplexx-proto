@@ -14,7 +14,7 @@ import common_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='descriptions.proto',
   package='',
-  serialized_pb='\n\x12\x64\x65scriptions.proto\x1a\x0c\x63ommon.proto\"Q\n\x0fHostDescription\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12.\n\x12\x64\x65viceDescriptions\x18\x02 \x03(\x0b\x32\x12.DeviceDescription\"i\n\x11\x44\x65viceDescription\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x12\n\ndeviceType\x18\x02 \x02(\t\x12.\n\x10\x64\x65viceProperties\x18\x03 \x03(\x0b\x32\x14.PropertyDescription\"s\n\x13PropertyDescription\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PropertyType\x12+\n\rsubProperties\x18\x03 \x03(\x0b\x32\x14.PropertyDescription')
+  serialized_pb='\n\x12\x64\x65scriptions.proto\x1a\x0c\x63ommon.proto\"Q\n\x0fHostDescription\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12.\n\x12\x64\x65viceDescriptions\x18\x02 \x03(\x0b\x32\x12.DeviceDescription\"i\n\x11\x44\x65viceDescription\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x12\n\ndeviceType\x18\x02 \x02(\t\x12.\n\x10\x64\x65viceProperties\x18\x03 \x03(\x0b\x32\x14.PropertyDescription\"\xa2\x01\n\x13PropertyDescription\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PropertyType\x12+\n\rsubProperties\x18\x03 \x03(\x0b\x32\x14.PropertyDescription\x12-\n\x0b\x63onstraints\x18\x04 \x01(\x0b\x32\x18.PropertyTypeConstraints')
 
 
 
@@ -124,6 +124,13 @@ _PROPERTYDESCRIPTION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='constraints', full_name='PropertyDescription.constraints', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -133,14 +140,15 @@ _PROPERTYDESCRIPTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=226,
-  serialized_end=341,
+  serialized_start=227,
+  serialized_end=389,
 )
 
 _HOSTDESCRIPTION.fields_by_name['deviceDescriptions'].message_type = _DEVICEDESCRIPTION
 _DEVICEDESCRIPTION.fields_by_name['deviceProperties'].message_type = _PROPERTYDESCRIPTION
 _PROPERTYDESCRIPTION.fields_by_name['type'].enum_type = common_pb2._PROPERTYTYPE
 _PROPERTYDESCRIPTION.fields_by_name['subProperties'].message_type = _PROPERTYDESCRIPTION
+_PROPERTYDESCRIPTION.fields_by_name['constraints'].message_type = common_pb2._PROPERTYTYPECONSTRAINTS
 DESCRIPTOR.message_types_by_name['HostDescription'] = _HOSTDESCRIPTION
 DESCRIPTOR.message_types_by_name['DeviceDescription'] = _DEVICEDESCRIPTION
 DESCRIPTOR.message_types_by_name['PropertyDescription'] = _PROPERTYDESCRIPTION
