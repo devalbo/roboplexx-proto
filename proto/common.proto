@@ -10,10 +10,10 @@ enum PropertyType {
 }
 
 message PropertyTypeConstraints {
-  optional double DoubleTypeMaxVal = 1;
-  optional double DoubleTypeMinVal = 2;
-  optional int64 IntTypeMaxVal = 3;
-  optional int64 IntTypeMinVal = 4;
+  optional double doubleTypeMaxVal = 1;
+  optional double doubleTypeMinVal = 2;
+  optional int64 intTypeMaxVal = 3;
+  optional int64 intTypeMinVal = 4;
 }
 
 message Property {

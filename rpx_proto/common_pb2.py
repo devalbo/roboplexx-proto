@@ -14,7 +14,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common.proto',
   package='',
-  serialized_pb='\n\x0c\x63ommon.proto\"{\n\x17PropertyTypeConstraints\x12\x18\n\x10\x44oubleTypeMaxVal\x18\x01 \x01(\x01\x12\x18\n\x10\x44oubleTypeMinVal\x18\x02 \x01(\x01\x12\x15\n\rIntTypeMaxVal\x18\x03 \x01(\x03\x12\x15\n\rIntTypeMinVal\x18\x04 \x01(\x03\"\xc0\x01\n\x08Property\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PropertyType\x12\x0e\n\x06string\x18\x03 \x01(\t\x12\x0c\n\x04\x62ool\x18\x04 \x01(\x08\x12\x0b\n\x03int\x18\x05 \x01(\x03\x12\x0e\n\x06\x64ouble\x18\x06 \x01(\x01\x12\r\n\x05\x62ytes\x18\x07 \x01(\x0c\x12\x1a\n\x12\x62ytes_content_type\x18\x08 \x01(\t\x12\x1d\n\nproperties\x18\t \x03(\x0b\x32\t.Property*\x83\x01\n\x0cPropertyType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x0e\n\nStringType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
+  serialized_pb='\n\x0c\x63ommon.proto\"{\n\x17PropertyTypeConstraints\x12\x18\n\x10\x64oubleTypeMaxVal\x18\x01 \x01(\x01\x12\x18\n\x10\x64oubleTypeMinVal\x18\x02 \x01(\x01\x12\x15\n\rintTypeMaxVal\x18\x03 \x01(\x03\x12\x15\n\rintTypeMinVal\x18\x04 \x01(\x03\"\xc0\x01\n\x08Property\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x1b\n\x04type\x18\x02 \x02(\x0e\x32\r.PropertyType\x12\x0e\n\x06string\x18\x03 \x01(\t\x12\x0c\n\x04\x62ool\x18\x04 \x01(\x08\x12\x0b\n\x03int\x18\x05 \x01(\x03\x12\x0e\n\x06\x64ouble\x18\x06 \x01(\x01\x12\r\n\x05\x62ytes\x18\x07 \x01(\x0c\x12\x1a\n\x12\x62ytes_content_type\x18\x08 \x01(\t\x12\x1d\n\nproperties\x18\t \x03(\x0b\x32\t.Property*\x83\x01\n\x0cPropertyType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x0e\n\nStringType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
 
 _PROPERTYTYPE = _descriptor.EnumDescriptor(
   name='PropertyType',
@@ -76,28 +76,28 @@ _PROPERTYTYPECONSTRAINTS = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='DoubleTypeMaxVal', full_name='PropertyTypeConstraints.DoubleTypeMaxVal', index=0,
+      name='doubleTypeMaxVal', full_name='PropertyTypeConstraints.doubleTypeMaxVal', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DoubleTypeMinVal', full_name='PropertyTypeConstraints.DoubleTypeMinVal', index=1,
+      name='doubleTypeMinVal', full_name='PropertyTypeConstraints.doubleTypeMinVal', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IntTypeMaxVal', full_name='PropertyTypeConstraints.IntTypeMaxVal', index=2,
+      name='intTypeMaxVal', full_name='PropertyTypeConstraints.intTypeMaxVal', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IntTypeMinVal', full_name='PropertyTypeConstraints.IntTypeMinVal', index=3,
+      name='intTypeMinVal', full_name='PropertyTypeConstraints.intTypeMinVal', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
