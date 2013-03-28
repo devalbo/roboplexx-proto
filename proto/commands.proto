@@ -1,16 +1,8 @@
 import "common.proto";
 
-message SetProperties {
+message SetDevicePropertiesMsg {
 	required string hostId = 1;
 	required string deviceId = 2;
 	repeated Property properties = 3;
 	optional string requestId = 5;	// unique value to requester
 }
-
-//message Command {
-//
-//	required string hostId = 1;
-//	required string deviceId = 2;
-//	repeated Property properties = 3;
-//	optional string requestId = 4;	// unique value to requester
-//}
