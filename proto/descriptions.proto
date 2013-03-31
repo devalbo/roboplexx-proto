@@ -1,19 +1,48 @@
-import "common.proto";
 
 message HostDescription {
 	required string hostId = 1;
-	repeated DeviceDescription deviceDescriptions = 2;
+	required string hostLabel = 2;
+	repeated DeviceDescription deviceDescriptions = 3;
+	repeated PropertyDescription hostPropertyDescriptions = 4;
+	repeated CommandDescription hostCommandDescriptions = 5;
 }
 
 message DeviceDescription {
 	required string deviceId = 1;
-	required string deviceType = 2;
-	repeated PropertyDescription deviceProperties = 3;
+	required string deviceLabel = 2;
+	required string deviceType = 3;
+  repeated DeviceDescription subDevices = 4;
+	repeated PropertyDescription devicePropertyDescriptions = 5;
+	repeated CommandDescription deviceCommandDescriptions = 6;
 }
 
 message PropertyDescription {
   required string propertyId = 1;
-  required PropertyType type = 2;
-  optional PropertyTypeConstraints constraints = 3;
-  repeated PropertyDescription subProperties = 4;
+  required string propertyLabel = 2;
+  required PropertyType type = 3;
+  optional PropertyTypeConstraints constraints = 4;
+  repeated PropertyDescription subPropertyDescriptions = 5;
+}
+
+message CommandDescription {
+  required string commandId = 1;
+  required string commandLabel = 2;
+  repeated PropertyDescription commandArgumentDescriptions = 3;
+}
+
+enum PropertyType {
+  UnknownType = 0;
+  StringType = 1;
+  BooleanType = 2;
+  IntType = 3;
+  DoubleType = 4;
+  BytesType = 5;
+  SubPropertiesType = 6;
+}
+
+message PropertyTypeConstraints {
+  optional double doubleTypeMaxVal = 1;
+  optional double doubleTypeMinVal = 2;
+  optional int64 intTypeMaxVal = 3;
+  optional int64 intTypeMinVal = 4;
 }

@@ -1,0 +1,25 @@
+import "common.proto";
+
+message SetDevicePropertiesTask {
+  required string hostId = 1;
+  repeated string devicePath = 2;
+  repeated Property properties = 3;
+}
+
+message DoDeviceCommandsTask {
+  required string hostId = 1;
+  repeated string devicePath = 2;
+  required string commandId = 3;
+  repeated Property commandArguments = 4;
+}
+
+message SetHostPropertiesTask {
+  required string hostId = 1;
+  repeated Property properties = 2;
+}
+
+message DoHostCommandsTask {
+  required string hostId = 1;
+  required string commandId = 2;
+  repeated Property commandArguments = 3;
+}

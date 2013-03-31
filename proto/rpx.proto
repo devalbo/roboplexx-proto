@@ -1,0 +1,32 @@
+import "tasktypes.proto";
+
+message RpxMessage {
+	required string version = 1;
+	repeated Operation operations = 2;
+}
+
+message Operation {
+  required double delayBeforeStartInSec = 1;
+  required bool blockUntilAllTasksComplete = 2;
+  repeated Task tasks = 3;
+  optional Operation nextOperation = 4;
+}
+
+message Task {
+  enum TaskType {
+    UnknownType = 0;
+    SetDevicePropertiesTaskType = 1;
+    BooleanType = 2;
+    IntType = 3;
+    DoubleType = 4;
+    BytesType = 5;
+    SubPropertiesType = 6;
+  }
+
+  required TaskType taskType = 1;
+  optional SetDevicePropertiesTask setDevicePropertiesTask = 2;
+  optional DoDeviceCommandsTask doDeviceCommandsTask = 3;
+  optional SetHostPropertiesTask setHostPropertiesTask = 4;
+  optional DoHostCommandsTask doHostCommandsTask = 5;
+}
+
