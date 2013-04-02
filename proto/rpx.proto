@@ -2,7 +2,7 @@ import "tasktypes.proto";
 
 message RpxMessage {
 	required string version = 1;
-	repeated Operation operations = 2;
+	required Operation firstOperation = 2;
 }
 
 message Operation {

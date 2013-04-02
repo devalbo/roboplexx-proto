@@ -14,7 +14,7 @@ import tasktypes_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rpx.proto',
   package='',
-  serialized_pb='\n\trpx.proto\x1a\x0ftasktypes.proto\"=\n\nRpxMessage\x12\x0f\n\x07version\x18\x01 \x02(\t\x12\x1e\n\noperations\x18\x02 \x03(\x0b\x32\n.Operation\"\x87\x01\n\tOperation\x12\x1d\n\x15\x64\x65layBeforeStartInSec\x18\x01 \x02(\x01\x12\"\n\x1a\x62lockUntilAllTasksComplete\x18\x02 \x02(\x08\x12\x14\n\x05tasks\x18\x03 \x03(\x0b\x32\x05.Task\x12!\n\rnextOperation\x18\x04 \x01(\x0b\x32\n.Operation\"\x93\x03\n\x04Task\x12 \n\x08taskType\x18\x01 \x02(\x0e\x32\x0e.Task.TaskType\x12\x39\n\x17setDevicePropertiesTask\x18\x02 \x01(\x0b\x32\x18.SetDevicePropertiesTask\x12\x33\n\x14\x64oDeviceCommandsTask\x18\x03 \x01(\x0b\x32\x15.DoDeviceCommandsTask\x12\x35\n\x15setHostPropertiesTask\x18\x04 \x01(\x0b\x32\x16.SetHostPropertiesTask\x12/\n\x12\x64oHostCommandsTask\x18\x05 \x01(\x0b\x32\x13.DoHostCommandsTask\"\x90\x01\n\x08TaskType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x1f\n\x1bSetDevicePropertiesTaskType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
+  serialized_pb='\n\trpx.proto\x1a\x0ftasktypes.proto\"A\n\nRpxMessage\x12\x0f\n\x07version\x18\x01 \x02(\t\x12\"\n\x0e\x66irstOperation\x18\x02 \x02(\x0b\x32\n.Operation\"\x87\x01\n\tOperation\x12\x1d\n\x15\x64\x65layBeforeStartInSec\x18\x01 \x02(\x01\x12\"\n\x1a\x62lockUntilAllTasksComplete\x18\x02 \x02(\x08\x12\x14\n\x05tasks\x18\x03 \x03(\x0b\x32\x05.Task\x12!\n\rnextOperation\x18\x04 \x01(\x0b\x32\n.Operation\"\x93\x03\n\x04Task\x12 \n\x08taskType\x18\x01 \x02(\x0e\x32\x0e.Task.TaskType\x12\x39\n\x17setDevicePropertiesTask\x18\x02 \x01(\x0b\x32\x18.SetDevicePropertiesTask\x12\x33\n\x14\x64oDeviceCommandsTask\x18\x03 \x01(\x0b\x32\x15.DoDeviceCommandsTask\x12\x35\n\x15setHostPropertiesTask\x18\x04 \x01(\x0b\x32\x16.SetHostPropertiesTask\x12/\n\x12\x64oHostCommandsTask\x18\x05 \x01(\x0b\x32\x13.DoHostCommandsTask\"\x90\x01\n\x08TaskType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x1f\n\x1bSetDevicePropertiesTaskType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
 
 
 
@@ -55,8 +55,8 @@ _TASK_TASKTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=491,
-  serialized_end=635,
+  serialized_start=495,
+  serialized_end=639,
 )
 
 
@@ -75,9 +75,9 @@ _RPXMESSAGE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='operations', full_name='RpxMessage.operations', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='firstOperation', full_name='RpxMessage.firstOperation', index=1,
+      number=2, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -91,7 +91,7 @@ _RPXMESSAGE = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=30,
-  serialized_end=91,
+  serialized_end=95,
 )
 
 
@@ -139,8 +139,8 @@ _OPERATION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=94,
-  serialized_end=229,
+  serialized_start=98,
+  serialized_end=233,
 )
 
 
@@ -196,11 +196,11 @@ _TASK = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=232,
-  serialized_end=635,
+  serialized_start=236,
+  serialized_end=639,
 )
 
-_RPXMESSAGE.fields_by_name['operations'].message_type = _OPERATION
+_RPXMESSAGE.fields_by_name['firstOperation'].message_type = _OPERATION
 _OPERATION.fields_by_name['tasks'].message_type = _TASK
 _OPERATION.fields_by_name['nextOperation'].message_type = _OPERATION
 _TASK.fields_by_name['taskType'].enum_type = _TASK_TASKTYPE
