@@ -14,13 +14,11 @@ message Operation {
 
 message Task {
   enum TaskType {
-    UnknownType = 0;
+    UnknownTaskType = 0;
     SetDevicePropertiesTaskType = 1;
-    BooleanType = 2;
-    IntType = 3;
-    DoubleType = 4;
-    BytesType = 5;
-    SubPropertiesType = 6;
+    DoDeviceCommandsTaskType = 2;
+    SetHostPropertiesTaskType = 3;
+    DoHostCommandsTaskType = 4;
   }
 
   required TaskType taskType = 1;

@@ -14,7 +14,7 @@ import tasktypes_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rpx.proto',
   package='',
-  serialized_pb='\n\trpx.proto\x1a\x0ftasktypes.proto\"A\n\nRpxMessage\x12\x0f\n\x07version\x18\x01 \x02(\t\x12\"\n\x0e\x66irstOperation\x18\x02 \x02(\x0b\x32\n.Operation\"\x87\x01\n\tOperation\x12\x1d\n\x15\x64\x65layBeforeStartInSec\x18\x01 \x02(\x01\x12\"\n\x1a\x62lockUntilAllTasksComplete\x18\x02 \x02(\x08\x12\x14\n\x05tasks\x18\x03 \x03(\x0b\x32\x05.Task\x12!\n\rnextOperation\x18\x04 \x01(\x0b\x32\n.Operation\"\x93\x03\n\x04Task\x12 \n\x08taskType\x18\x01 \x02(\x0e\x32\x0e.Task.TaskType\x12\x39\n\x17setDevicePropertiesTask\x18\x02 \x01(\x0b\x32\x18.SetDevicePropertiesTask\x12\x33\n\x14\x64oDeviceCommandsTask\x18\x03 \x01(\x0b\x32\x15.DoDeviceCommandsTask\x12\x35\n\x15setHostPropertiesTask\x18\x04 \x01(\x0b\x32\x16.SetHostPropertiesTask\x12/\n\x12\x64oHostCommandsTask\x18\x05 \x01(\x0b\x32\x13.DoHostCommandsTask\"\x90\x01\n\x08TaskType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x1f\n\x1bSetDevicePropertiesTaskType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
+  serialized_pb='\n\trpx.proto\x1a\x0ftasktypes.proto\"A\n\nRpxMessage\x12\x0f\n\x07version\x18\x01 \x02(\t\x12\"\n\x0e\x66irstOperation\x18\x02 \x02(\x0b\x32\n.Operation\"\x87\x01\n\tOperation\x12\x1d\n\x15\x64\x65layBeforeStartInSec\x18\x01 \x02(\x01\x12\"\n\x1a\x62lockUntilAllTasksComplete\x18\x02 \x02(\x08\x12\x14\n\x05tasks\x18\x03 \x03(\x0b\x32\x05.Task\x12!\n\rnextOperation\x18\x04 \x01(\x0b\x32\n.Operation\"\x9c\x03\n\x04Task\x12 \n\x08taskType\x18\x01 \x02(\x0e\x32\x0e.Task.TaskType\x12\x39\n\x17setDevicePropertiesTask\x18\x02 \x01(\x0b\x32\x18.SetDevicePropertiesTask\x12\x33\n\x14\x64oDeviceCommandsTask\x18\x03 \x01(\x0b\x32\x15.DoDeviceCommandsTask\x12\x35\n\x15setHostPropertiesTask\x18\x04 \x01(\x0b\x32\x16.SetHostPropertiesTask\x12/\n\x12\x64oHostCommandsTask\x18\x05 \x01(\x0b\x32\x13.DoHostCommandsTask\"\x99\x01\n\x08TaskType\x12\x13\n\x0fUnknownTaskType\x10\x00\x12\x1f\n\x1bSetDevicePropertiesTaskType\x10\x01\x12\x1c\n\x18\x44oDeviceCommandsTaskType\x10\x02\x12\x1d\n\x19SetHostPropertiesTaskType\x10\x03\x12\x1a\n\x16\x44oHostCommandsTaskType\x10\x04')
 
 
 
@@ -25,7 +25,7 @@ _TASK_TASKTYPE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='UnknownType', index=0, number=0,
+      name='UnknownTaskType', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -33,30 +33,22 @@ _TASK_TASKTYPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='BooleanType', index=2, number=2,
+      name='DoDeviceCommandsTaskType', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='IntType', index=3, number=3,
+      name='SetHostPropertiesTaskType', index=3, number=3,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DoubleType', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='BytesType', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubPropertiesType', index=6, number=6,
+      name='DoHostCommandsTaskType', index=4, number=4,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=495,
-  serialized_end=639,
+  serialized_end=648,
 )
 
 
@@ -197,7 +189,7 @@ _TASK = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=236,
-  serialized_end=639,
+  serialized_end=648,
 )
 
 _RPXMESSAGE.fields_by_name['firstOperation'].message_type = _OPERATION
