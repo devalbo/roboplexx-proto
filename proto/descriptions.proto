@@ -19,9 +19,10 @@ message DeviceDescription {
 message PropertyDescription {
   required string propertyId = 1;
   required string propertyLabel = 2;
-  required PropertyType type = 3;
+  required PropertyType propertyType = 3;
   optional PropertyTypeConstraints constraints = 4;
   repeated PropertyDescription subPropertyDescriptions = 5;
+  optional bool persist = 6;
 }
 
 message CommandDescription {

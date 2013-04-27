@@ -14,7 +14,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='descriptions.proto',
   package='',
-  serialized_pb='\n\x12\x64\x65scriptions.proto\"\xd2\x01\n\x0fHostDescription\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12\x11\n\thostLabel\x18\x02 \x02(\t\x12.\n\x12\x64\x65viceDescriptions\x18\x03 \x03(\x0b\x32\x12.DeviceDescription\x12\x36\n\x18hostPropertyDescriptions\x18\x04 \x03(\x0b\x32\x14.PropertyDescription\x12\x34\n\x17hostCommandDescriptions\x18\x05 \x03(\x0b\x32\x13.CommandDescription\"\xe8\x01\n\x11\x44\x65viceDescription\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x13\n\x0b\x64\x65viceLabel\x18\x02 \x02(\t\x12\x12\n\ndeviceType\x18\x03 \x02(\t\x12&\n\nsubDevices\x18\x04 \x03(\x0b\x32\x12.DeviceDescription\x12\x38\n\x1a\x64\x65vicePropertyDescriptions\x18\x05 \x03(\x0b\x32\x14.PropertyDescription\x12\x36\n\x19\x64\x65viceCommandDescriptions\x18\x06 \x03(\x0b\x32\x13.CommandDescription\"\xc3\x01\n\x13PropertyDescription\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x15\n\rpropertyLabel\x18\x02 \x02(\t\x12\x1b\n\x04type\x18\x03 \x02(\x0e\x32\r.PropertyType\x12-\n\x0b\x63onstraints\x18\x04 \x01(\x0b\x32\x18.PropertyTypeConstraints\x12\x35\n\x17subPropertyDescriptions\x18\x05 \x03(\x0b\x32\x14.PropertyDescription\"x\n\x12\x43ommandDescription\x12\x11\n\tcommandId\x18\x01 \x02(\t\x12\x14\n\x0c\x63ommandLabel\x18\x02 \x02(\t\x12\x39\n\x1b\x63ommandArgumentDescriptions\x18\x03 \x03(\x0b\x32\x14.PropertyDescription\"{\n\x17PropertyTypeConstraints\x12\x18\n\x10\x64oubleTypeMaxVal\x18\x01 \x01(\x01\x12\x18\n\x10\x64oubleTypeMinVal\x18\x02 \x01(\x01\x12\x15\n\rintTypeMaxVal\x18\x03 \x01(\x03\x12\x15\n\rintTypeMinVal\x18\x04 \x01(\x03*\x83\x01\n\x0cPropertyType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x0e\n\nStringType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
+  serialized_pb='\n\x12\x64\x65scriptions.proto\"\xd2\x01\n\x0fHostDescription\x12\x0e\n\x06hostId\x18\x01 \x02(\t\x12\x11\n\thostLabel\x18\x02 \x02(\t\x12.\n\x12\x64\x65viceDescriptions\x18\x03 \x03(\x0b\x32\x12.DeviceDescription\x12\x36\n\x18hostPropertyDescriptions\x18\x04 \x03(\x0b\x32\x14.PropertyDescription\x12\x34\n\x17hostCommandDescriptions\x18\x05 \x03(\x0b\x32\x13.CommandDescription\"\xe8\x01\n\x11\x44\x65viceDescription\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x13\n\x0b\x64\x65viceLabel\x18\x02 \x02(\t\x12\x12\n\ndeviceType\x18\x03 \x02(\t\x12&\n\nsubDevices\x18\x04 \x03(\x0b\x32\x12.DeviceDescription\x12\x38\n\x1a\x64\x65vicePropertyDescriptions\x18\x05 \x03(\x0b\x32\x14.PropertyDescription\x12\x36\n\x19\x64\x65viceCommandDescriptions\x18\x06 \x03(\x0b\x32\x13.CommandDescription\"\xdc\x01\n\x13PropertyDescription\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x15\n\rpropertyLabel\x18\x02 \x02(\t\x12#\n\x0cpropertyType\x18\x03 \x02(\x0e\x32\r.PropertyType\x12-\n\x0b\x63onstraints\x18\x04 \x01(\x0b\x32\x18.PropertyTypeConstraints\x12\x35\n\x17subPropertyDescriptions\x18\x05 \x03(\x0b\x32\x14.PropertyDescription\x12\x0f\n\x07persist\x18\x06 \x01(\x08\"x\n\x12\x43ommandDescription\x12\x11\n\tcommandId\x18\x01 \x02(\t\x12\x14\n\x0c\x63ommandLabel\x18\x02 \x02(\t\x12\x39\n\x1b\x63ommandArgumentDescriptions\x18\x03 \x03(\x0b\x32\x14.PropertyDescription\"{\n\x17PropertyTypeConstraints\x12\x18\n\x10\x64oubleTypeMaxVal\x18\x01 \x01(\x01\x12\x18\n\x10\x64oubleTypeMinVal\x18\x02 \x01(\x01\x12\x15\n\rintTypeMaxVal\x18\x03 \x01(\x03\x12\x15\n\rintTypeMinVal\x18\x04 \x01(\x03*\x83\x01\n\x0cPropertyType\x12\x0f\n\x0bUnknownType\x10\x00\x12\x0e\n\nStringType\x10\x01\x12\x0f\n\x0b\x42ooleanType\x10\x02\x12\x0b\n\x07IntType\x10\x03\x12\x0e\n\nDoubleType\x10\x04\x12\r\n\tBytesType\x10\x05\x12\x15\n\x11SubPropertiesType\x10\x06')
 
 _PROPERTYTYPE = _descriptor.EnumDescriptor(
   name='PropertyType',
@@ -53,8 +53,8 @@ _PROPERTYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=916,
-  serialized_end=1047,
+  serialized_start=941,
+  serialized_end=1072,
 )
 
 PropertyType = enum_type_wrapper.EnumTypeWrapper(_PROPERTYTYPE)
@@ -209,7 +209,7 @@ _PROPERTYDESCRIPTION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='PropertyDescription.type', index=2,
+      name='propertyType', full_name='PropertyDescription.propertyType', index=2,
       number=3, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -229,6 +229,13 @@ _PROPERTYDESCRIPTION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='persist', full_name='PropertyDescription.persist', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -239,7 +246,7 @@ _PROPERTYDESCRIPTION = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=471,
-  serialized_end=666,
+  serialized_end=691,
 )
 
 
@@ -280,8 +287,8 @@ _COMMANDDESCRIPTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=668,
-  serialized_end=788,
+  serialized_start=693,
+  serialized_end=813,
 )
 
 
@@ -329,8 +336,8 @@ _PROPERTYTYPECONSTRAINTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=790,
-  serialized_end=913,
+  serialized_start=815,
+  serialized_end=938,
 )
 
 _HOSTDESCRIPTION.fields_by_name['deviceDescriptions'].message_type = _DEVICEDESCRIPTION
@@ -339,7 +346,7 @@ _HOSTDESCRIPTION.fields_by_name['hostCommandDescriptions'].message_type = _COMMA
 _DEVICEDESCRIPTION.fields_by_name['subDevices'].message_type = _DEVICEDESCRIPTION
 _DEVICEDESCRIPTION.fields_by_name['devicePropertyDescriptions'].message_type = _PROPERTYDESCRIPTION
 _DEVICEDESCRIPTION.fields_by_name['deviceCommandDescriptions'].message_type = _COMMANDDESCRIPTION
-_PROPERTYDESCRIPTION.fields_by_name['type'].enum_type = _PROPERTYTYPE
+_PROPERTYDESCRIPTION.fields_by_name['propertyType'].enum_type = _PROPERTYTYPE
 _PROPERTYDESCRIPTION.fields_by_name['constraints'].message_type = _PROPERTYTYPECONSTRAINTS
 _PROPERTYDESCRIPTION.fields_by_name['subPropertyDescriptions'].message_type = _PROPERTYDESCRIPTION
 _COMMANDDESCRIPTION.fields_by_name['commandArgumentDescriptions'].message_type = _PROPERTYDESCRIPTION
